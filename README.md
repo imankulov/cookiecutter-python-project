@@ -85,6 +85,18 @@ EOF
 
 Ref: https://github.com/microsoft/vscode-python/issues/8372
 
+## Using .env with VSCode
+
+If you use VSCode and the [vscode-dotenv](https://github.com/mikestead/vscode-dotenv)
+extension, add the following lines to your `.vscode/settings.json` file:
+
+```json
+"files.associations": {
+  "env.example": "dotenv",
+  "env.github-actions": "dotenv"
+}
+```
+
 ## How to contribute
 
 Well, just create an issue or a pull request.
