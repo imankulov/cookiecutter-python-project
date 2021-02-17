@@ -54,10 +54,23 @@ Other hints:
   to fill in our README with the content.
 - Use [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) guideline for your
   changelog entries.
-  
+
+## Tests with GitHub actions
+
+A file `.github/workflows/tests.yml` is responsible for running tests on GitHub and
+upload coverage results to codecov.io.
+
+To make it work with codecov.
+
+- Go to https://app.codecov.io/ and find a repository upload token for your project.
+- Go to your repository settings on GitHub, and define the actions secret
+  `CODECOV_TOKEN`: Settings → Secrets → New repository secret).
+
+If you don't configure the token, the action quietly skips the upload step.
+
 ## How to configure VSCode
 
-At the moment, VSCode doesn't automatically detect Poetry environments. You can set it 
+At the moment, VSCode doesn't automatically detect Poetry environments. You can set it
 manually though. For a newly created project, create a `.vscode/settings.json`
 
 ```
