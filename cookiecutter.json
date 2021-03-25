@@ -1,15 +1,15 @@
 {
-  "author_name": "Doist Developers",
-  "author_email": "dev@doist.com",
-  "author_github": "Doist",
+  "author_name": "Your Name",
+  "author_email": "you@example.com",
+  "author_github": "youraccount",
 
   "project_name": "Foo Bar",
-  "project_short_description": "Starter Template for Python projects at Doist",
+  "project_short_description": "Starter Template for Python projects",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
   "project_license": ["MIT", "Proprietary"],
   "project_url": "https://github.com/{{ cookiecutter.author_github}}/{{ cookiecutter.project_slug }}",
-  "project_version": "1.0.0",
-  "project_version_tuple": "({{', '.join(cookiecutter.project_version.split('.'))}})",
+  "project_version": "0.1.0",
+
   "root_package": "{{ cookiecutter.project_slug.replace('-', '_') }}",
   "python_version": "3.9"
 }
