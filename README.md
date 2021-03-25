@@ -1,17 +1,18 @@
-# Starter Template for Python projects at Doist
+# Starter Template for Python projects
 
-Use this cookiecutter template 🍪 to start every new Python project at Doist.
+Use this cookiecutter template 🍪 to start every new Python project.
 
 ## Getting Started
 
 Nothing can be easier:
 
 ```
-git clone https://github.com/Doist/cookiecutter-python-project.git
+git clone https://github.com/imankulov/cookiecutter-python-project.git
 cookiecutter cookiecutter-python-project/
 ```
 
 For Windows, you might need to run `python -m cookiecutter` as the command might not work even though it's correctly configured on the PATH.
+
 
 ## What's inside
 
@@ -25,6 +26,23 @@ The template covers your back with the following elements:
 - Pre-configured mypy, Flake8, isort.
 - A set of pre-commit hooks.
 - pyproject.toml for Poetry.
+
+## Django flavour
+
+There is a branch [django](https://github.com/imankulov/cookiecutter-python-project/tree/django) that contains an opinionated setup for starting up a new Django project. The setup includes:
+
+- Dependencies: django, django-environ, psycopg2-binary, sentry-sdk
+- Dev dependencies: pytest-django
+- Sample environment file: env.example
+- A boilerplate project template. The settings.py file reads environment from the .env file.
+
+If you want to start a new Django project, switch to a Django branch before starting the cookiecutter.
+
+```
+git clone https://github.com/imankulov/cookiecutter-python-project.git
+git checkout django
+cookiecutter cookiecutter-python-project/
+```
 
 ## How to use it
 
