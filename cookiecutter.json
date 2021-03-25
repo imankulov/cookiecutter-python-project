@@ -10,6 +10,12 @@
   "project_url": "https://github.com/{{ cookiecutter.author_github}}/{{ cookiecutter.project_slug }}",
   "project_version": "0.1.0",
 
+  "postgresql_port": "5432",
+  "postgresql_version": "14",
+  "postgresql_user": "{{ cookiecutter.project_slug.replace('-', '_') }}",
+  "postgresql_password": "password",
+  "postgresql_database": "{{ cookiecutter.project_slug.replace('-', '_') }}",
+
   "root_package": "{{ cookiecutter.project_slug.replace('-', '_') }}",
   "python_version": "3.11"
 }

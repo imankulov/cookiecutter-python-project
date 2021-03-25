@@ -5,6 +5,18 @@ on: [push]
 jobs:
   build-test:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:14
+        env:
+          POSTGRES_USER: "{{ cookiecutter.postgresql_user }}"
+          POSTGRES_PASSWORD: "{{ cookiecutter.postgresql_password }}"
+          POSTGRES_DB: "{{ cookiecutter.postgresql_database }}"
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python
@@ -16,10 +28,9 @@ jobs:
           set -ex
           curl -sSL https://install.python-poetry.org | python3 -
           $HOME/.local/bin/poetry install
-      - name: Copy env.example to .env
+      - name: Create environment file for testing
         run: |
-          set -ex
-          test -f env.example && cp -a env.example .env || echo "env.example doesn't exist. It's OK"
+          cp env.testing .env
       - name: Test with pytest
         run: |
           set -ex

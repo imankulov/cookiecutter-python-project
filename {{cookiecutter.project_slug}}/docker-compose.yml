@@ -1,0 +1,18 @@
+version: "3.2"
+
+services:
+  db:
+    image: postgres:{{ cookiecutter.postgresql_version }}
+    environment:
+      POSTGRES_USER: "{{ cookiecutter.postgresql_user }}"
+      POSTGRES_PASSWORD: "{{ cookiecutter.postgresql_password }}"
+      POSTGRES_DB: "{{ cookiecutter.postgresql_database }}"
+    ports:
+      - "127.0.0.1:{{ cookiecutter.postgresql_port }}:5432"
+    volumes:
+      - "postgres-data:/var/lib/postgresql/data"
+
+volumes:
+  # The storage can be cleaned up by running the command:
+  # docker-compose down -v
+  postgres-data: {}
