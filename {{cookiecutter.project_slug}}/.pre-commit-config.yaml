@@ -49,8 +49,3 @@ repos:
     rev: 3.9.2
     hooks:
       - id: flake8
-
-  - repo: https://github.com/seddonym/import-linter
-    rev: v1.2.6
-    hooks:
-      - id: import-linter
