@@ -6,6 +6,9 @@ readme = "README.md"
 homepage = "{{ cookiecutter.project_url }}"
 repository = "{{ cookiecutter.project_url }}"
 authors = ["{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>"]
+packages = [
+    { include = "{{ cookiecutter.root_package }}" }
+]
 license = "{{ cookiecutter.project_license }}"
 classifiers = [
     "Intended Audience :: Developers",
