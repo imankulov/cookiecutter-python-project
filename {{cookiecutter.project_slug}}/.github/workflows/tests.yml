@@ -18,11 +18,14 @@ jobs:
           python get-poetry.py --yes
           rm -f get-poetry.py
           $HOME/.poetry/bin/poetry install
+      - name: Copy env.example to .env
+        run: |
+          set -ex
+          test -f env.example && cp -a env.example .env || echo "env.example doesn't exist. It's OK"
       - name: Test with pytest
         run: |
           set -ex
           $HOME/.poetry/bin/poetry run coverage run -m pytest
-
       - name: Convert coverage to XML
         run: |
           set -ex
