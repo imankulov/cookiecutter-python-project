@@ -27,14 +27,14 @@ The template covers your back with the following elements:
 - A set of pre-commit hooks.
 - pyproject.toml for Poetry.
 
-## Django flavour
+## Django flavor
 
-There is a branch [django](https://github.com/imankulov/cookiecutter-python-project/tree/django) that contains an opinionated setup for starting up a new Django project. The setup includes:
+A branch [django](https://github.com/imankulov/cookiecutter-python-project/tree/django) contains an opinionated configuration for starting up a new Django project. The setup includes:
 
 - Dependencies: django, django-environ, psycopg2-binary, sentry-sdk
 - Dev dependencies: pytest-django
 - Sample environment file: env.example
-- A boilerplate project template. The settings.py file reads environment from the .env file.
+- A boilerplate project template. The settings.py file reads the environment from the .env file.
 
 If you want to start a new Django project, switch to a Django branch before starting the cookiecutter.
 
@@ -48,23 +48,26 @@ cookiecutter cookiecutter-python-project/
 
 Before creating a project:
 
-- Install [Poetry](https://python-poetry.org/docs/#installation)
+- Install [Poetry](https://python-poetry.org/docs/#installation).
+- Install [pre-commit](https://pre-commit.com/).
 - Choose a project name. Likely, in the format `foo-bar` and create a GitHub
   repository for it. The root package of your project will have a default
   name `foo_bar`. Make sure that you made the repository private if you plan to create
   a private (non-open-source) project.
-- Choose the license. For public projects use MIT, for private projects use
-  "Proprietary".
+- Choose the license. For public projects, use MIT. For private projects, use "Proprietary."
+
+The project generation runs these steps:
+
+- Creates a new project from the template.
+- Initializes a GitHub repository.
+- Installs pre-commit hooks and updates all hooks to their latest versions.
+- Create an initial commit.
 
 After creating a project:
 
-- Initialize git repo with `git init`
-- Initialize your pre-commit hooks inside the repo with `pre-commit install`. For
-  more details follow https://pre-commit.com/
-- Initialize virtual environment and install all dependencies with `poetry install`
-- Add all files to the repo, review staged changes and commit them.
+- Initialize the virtual environment and install all dependencies with `poetry install`.
 - Deploy changes to GitHub.
-- For Windows, you might need to change your personal access token to GitHub, see information [here](https://github.com/gitextensions/gitextensions/issues/4916#issuecomment-557509451)
+- For Windows, you might need to change your access token to GitHub. See information [here](https://github.com/gitextensions/gitextensions/issues/4916#issuecomment-557509451)
 
 Other hints:
 
@@ -89,7 +92,7 @@ If you don't configure the token, the action quietly skips the upload step.
 ## How to configure VSCode
 
 At the moment, VSCode doesn't automatically detect Poetry environments. You can set it
-manually though. For a newly created project, create a `.vscode/settings.json`
+manually, though. For a newly created project, create a `.vscode/settings.json`
 
 ```
 poetry install
@@ -117,4 +120,5 @@ extension, add the following lines to your `.vscode/settings.json` file:
 
 ## How to contribute
 
-Well, just create an issue or a pull request.
+- If you have questions, ideas or suggestions, write them down in an issue.
+- If you have a fix or an enhancement, create a pull request.
