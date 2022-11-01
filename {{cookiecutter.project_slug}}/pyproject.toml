@@ -24,15 +24,15 @@ include = [
 python = "~{{ cookiecutter.python_version }}"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^6.2.5"
-pytest-xdist = "^2.5.0"
-pytest-cov = "^3.0.0"
-black = "^21.12b0"
-flake8 = "^4.0.1"
-coverage = "^6.2"
-import-linter = "^1.2.6"
-mkdocs-material = "^8.1.2"
-mkdocstrings = "^0.16.2"
+pytest = "^7.2.0"
+pytest-xdist = "^3.0.2"
+pytest-cov = "^4.0.0"
+black = "^22.10.0"
+flake8 = "^5.0.4"
+coverage = "^6.5.0"
+import-linter = "^1.4.0"
+mkdocs-material = "^8.5.7"
+mkdocstrings = "^0.19.0"
 
 [build-system]
 requires = ["poetry-core"]
