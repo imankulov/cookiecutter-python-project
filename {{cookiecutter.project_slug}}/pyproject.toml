@@ -14,7 +14,7 @@ classifiers = [
     "Intended Audience :: Developers",
     {% if cookiecutter.project_license == 'Proprietary' -%}
     "Private :: Do Not Upload",
-    {% endif -%}
+    {%- endif %}
 ]
 include = [
     "CHANGELOG.md"
@@ -23,7 +23,7 @@ include = [
 [tool.poetry.dependencies]
 python = "~{{ cookiecutter.python_version }}"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pytest = "^6.2.5"
 pytest-xdist = "^2.5.0"
 pytest-cov = "^3.0.0"
@@ -35,7 +35,7 @@ mkdocs-material = "^8.1.2"
 mkdocstrings = "^0.16.2"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 

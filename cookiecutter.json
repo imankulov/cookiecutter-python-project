@@ -11,5 +11,5 @@
   "project_version": "0.1.0",
 
   "root_package": "{{ cookiecutter.project_slug.replace('-', '_') }}",
-  "python_version": "3.9"
+  "python_version": "3.10"
 }

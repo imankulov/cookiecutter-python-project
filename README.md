@@ -2,13 +2,20 @@
 
 Use this cookiecutter template 🍪 to start every new Python project.
 
+## System Dependencies
+
+- Git
+- Python 3.10
+- [Poetry](https://python-poetry.org/docs/#installation) 1.2.x
+- [Pre-commit hooks](https://pre-commit.com/)
+
+
 ## Getting Started
 
-Nothing can be easier:
+Create a new Python project
 
 ```
-git clone https://github.com/imankulov/cookiecutter-python-project.git
-cookiecutter cookiecutter-python-project/
+cookiecutter gh:imankulov/cookiecutter-python-project
 ```
 
 For Windows, you might need to run `python -m cookiecutter` as the command might not work even though it's correctly configured on the PATH.
