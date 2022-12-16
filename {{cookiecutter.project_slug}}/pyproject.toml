@@ -12,9 +12,9 @@ packages = [
 license = "{{ cookiecutter.project_license }}"
 classifiers = [
     "Intended Audience :: Developers",
-    {% if cookiecutter.project_license == 'Proprietary' -%}
+{% if cookiecutter.project_license == 'Proprietary' -%}
     "Private :: Do Not Upload",
-    {%- endif %}
+{%- endif %}
 ]
 include = [
     "CHANGELOG.md"

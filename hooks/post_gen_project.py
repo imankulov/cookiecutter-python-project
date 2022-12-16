@@ -9,8 +9,12 @@ def run():
     run_command("pre-commit", "autoupdate")
     run_command("git", "add", ".")  # make sure we stage .pre-commit configuration
     run_command("pre-commit", "run", "--all-files")
+    run_command("git", "add", ".")  # absorb changes made by pre-commit
     run_command(
-        "git", "commit", "-m", "Generate project from cookiecutter-python-project"
+        "git",
+        "commit",
+        "-m",
+        "Generate project from imankulov/cookiecutter-python-project",
     )
 
 

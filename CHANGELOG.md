@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added Django flavor.
 - Added post-generation hooks to initialize pre-commit and commit changes.
-- Added pyupgrade to pre-commit hooks
+- Added pyupgrade to pre-commit hooks.
+- Update Python version to 3.11.
 
 ## [2.0.0] - 2020-01-16
 

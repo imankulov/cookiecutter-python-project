@@ -5,7 +5,7 @@ Use this cookiecutter template 🍪 to start every new Python project.
 ## System Dependencies
 
 - Git
-- Python 3.10
+- Python 3.11
 - [Poetry](https://python-poetry.org/docs/#installation) 1.2.x
 - [Pre-commit hooks](https://pre-commit.com/)
 
