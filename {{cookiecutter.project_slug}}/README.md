@@ -1,5 +1,7 @@
 # {{ cookiecutter.project_name }}
 
+![Tests](https://github.com/{{ cookiecutter.author_github}}/{{ cookiecutter.project_slug }}/actions/workflows/tests.yml/badge.svg)
+
 {{ cookiecutter.project_short_description}}
 
 ## Getting Started
