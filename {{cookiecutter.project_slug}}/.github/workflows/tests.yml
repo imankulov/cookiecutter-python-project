@@ -5,6 +5,7 @@ on: [push]
 jobs:
   build-test:
     runs-on: ubuntu-latest
+    {% if cookiecutter.database == "postgresql" -%}
     services:
       postgres:
         image: postgres:14
@@ -17,6 +18,7 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
+    {%- endif %}
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python

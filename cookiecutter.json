@@ -10,8 +10,10 @@
   "project_url": "https://github.com/{{ cookiecutter.author_github}}/{{ cookiecutter.project_slug }}",
   "project_version": "0.1.0",
 
+  "database": ["postgresql", "sqlite"],
+
   "postgresql_port": "5432",
-  "postgresql_version": "14",
+  "postgresql_version": "15",
   "postgresql_user": "{{ cookiecutter.project_slug.replace('-', '_') }}",
   "postgresql_password": "password",
   "postgresql_database": "{{ cookiecutter.project_slug.replace('-', '_') }}",

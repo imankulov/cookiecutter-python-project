@@ -1,8 +1,15 @@
 import subprocess as subp
 
 
+DATABASE = "{{ cookiecutter.database }}"
+
+
 def run():
     """Main entrypoint."""
+    if DATABASE == "sqlite":
+        # We don't need docker-compose.yml for sqlite
+        run_command("rm", "-f", "docker-compose.yml")
+
     run_command("git", "init")
     run_command("git", "add", ".")
     run_command("pre-commit", "install")
