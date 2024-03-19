@@ -5,10 +5,9 @@ Use this cookiecutter template 🍪 to start every new Python project.
 ## System Dependencies
 
 - Git
-- Python 3.11
-- [Poetry](https://python-poetry.org/docs/#installation) 1.2.x
+- Python 3.12
+- [Poetry](https://python-poetry.org/docs/#installation) 1.6.x
 - [Pre-commit hooks](https://pre-commit.com/)
-
 
 ## Getting Started
 
@@ -20,7 +19,6 @@ cookiecutter gh:imankulov/cookiecutter-python-project
 
 For Windows, you might need to run `python -m cookiecutter` as the command might not work even though it's correctly configured on the PATH.
 
-
 ## What's inside
 
 The template covers your back with the following elements:
@@ -30,7 +28,7 @@ The template covers your back with the following elements:
 - Stub project template.
 - Test directory with a sample test file.
 - GitHub workflow configuration to run pytest automatically.
-- Pre-configured mypy, Flake8, isort.
+- Pre-configured mypy and ruff
 - A set of pre-commit hooks.
 - pyproject.toml for Poetry.
 
