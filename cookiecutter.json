@@ -13,7 +13,7 @@
   "database": ["postgresql", "sqlite"],
 
   "postgresql_port": "5432",
-  "postgresql_version": "15",
+  "postgresql_version": "16",
   "postgresql_user": "{{ cookiecutter.project_slug.replace('-', '_') }}",
   "postgresql_password": "password",
   "postgresql_database": "{{ cookiecutter.project_slug.replace('-', '_') }}",
